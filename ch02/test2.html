@@ -1,0 +1,665 @@
+﻿
+<!DOCTYPE html lang="ko">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Brightman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="description" content="Brightman" />
+    <meta name="keywords" content="Brightman" />
+    <meta name="author" content="Brightman" />
+
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="css/simple-line-icons.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--
+    Default Theme Style
+    You can change the style.css (default color purple) to one of these styles
+
+    1. pink.css
+    2. blue.css
+    3. turquoise.css
+    4. orange.css
+    5. lightblue.css
+    6. brown.css
+    7. green.css
+
+    -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Styleswitcher ( This style is for demo purposes only, you may delete this anytime. ) -->
+    <link rel="stylesheet" id="theme-switch" href="css/style.css">
+    <!-- End demo purposes only -->
+
+    <style>
+        /* For demo purpose only */
+
+        /* For Demo Purposes Only ( You can delete this anytime :-) */
+        #colour-variations {
+            padding: 10px;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+            width: 140px;
+            position: fixed;
+            left: 0;
+            top: 100px;
+            z-index: 999999;
+            background: #fff;
+            /*border-radius: 4px;*/
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            -webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+            -moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+            -ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+            box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+        }
+
+            #colour-variations.sleep {
+                margin-left: -140px;
+            }
+
+            #colour-variations h3 {
+                text-align: center;
+                ;
+                font-size: 11px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #777;
+                margin: 0 0 10px 0;
+                padding: 0;
+                ;
+            }
+
+            #colour-variations ul,
+            #colour-variations ul li {
+                padding: 0;
+                margin: 0;
+            }
+
+            #colour-variations li {
+                list-style: none;
+                display: inline;
+            }
+
+                #colour-variations li a {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    float: left;
+                    margin: 5px;
+                }
+
+                    #colour-variations li a[data-theme="style"] {
+                        background: #6173f4;
+                    }
+
+                    #colour-variations li a[data-theme="pink"] {
+                        background: #f64662;
+                    }
+
+                    #colour-variations li a[data-theme="blue"] {
+                        background: #2185d5;
+                    }
+
+                    #colour-variations li a[data-theme="turquoise"] {
+                        background: #00b8a9;
+                    }
+
+                    #colour-variations li a[data-theme="orange"] {
+                        background: #ff6600;
+                    }
+
+                    #colour-variations li a[data-theme="lightblue"] {
+                        background: #5585b5;
+                    }
+
+                    #colour-variations li a[data-theme="brown"] {
+                        background: #a03232;
+                    }
+
+                    #colour-variations li a[data-theme="green"] {
+                        background: #65d269;
+                    }
+
+        .option-toggle {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 5px;
+            margin-right: -30px;
+            width: 30px;
+            height: 30px;
+            background: #f64662;
+            text-align: center;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            -webkit-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+            -moz-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+            -ms-box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+            box-shadow: 0 0 9px 0 rgba(0,0,0,.1);
+        }
+
+            .option-toggle i {
+                top: 2px;
+                position: relative;
+            }
+
+            .option-toggle:hover, .option-toggle:focus, .option-toggle:active {
+                color: #fff;
+                text-decoration: none;
+                outline: none;
+                .carousel-control.right, .carousel-control.left;
+
+        {
+            background-image: none;
+            color: #f4511e;
+        }
+
+        .carousel-indicators li {
+            border-color: #f4511e;
+        }
+
+            .carousel-indicators li.active {
+                background-color: #f4511e;
+            }
+
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+
+        .item span {
+            font-style: normal;
+        }
+    </style>
+    <!-- End demo purposes only -->
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <header role="banner" id="fh5co-header">
+        <div class="container">
+            <!-- <div class="row"> -->
+            <nav class="navbar navbar-default">
+                <div class="navbar-header">
+                    <!-- Mobile Toggle Menu Button -->
+                    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="margin-top:15px;"><i></i></a>
+                    <a class="navbar-brand" href="index.html">(주)우리같이</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#" data-nav-section="home"><span>홈</span></a></li>
+                        <li><a href="#" data-nav-section="company"><span>회사소개</span></a></li>
+                        <li><a href="#" data-nav-section="services"><span>서비스</span></a></li>
+                        <li><a href="#" data-nav-section="features"><span>기술력</span></a></li>
+                        <li><a href="#" data-nav-section="history"><span>연혁</span></a></li>
+                        <li><a href="#" data-nav-section="pricing"><span>정보보호인증</span></a></li>
+                        <li><a href="#" data-nav-section="ci"><span>CI</span></a></li>
+                        <li><a href="#" data-nav-section="contact"><span>오시는길</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- </div> -->
+        </div>
+    </header>
+    <div id="slider" data-section="home">
+        <div class="owl-carousel owl-carousel-fullwidth">
+            <!-- You may change the background color here. -->
+            <div class="item" style=" background-image:url(images/slidebg01.jpg)">
+            <div class="overlay"></div>
+            <div class="container" style="position: relative;">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="fh5co-owl-text-wrap">
+                            <div class="fh5co-owl-text">
+                                <h1 class="fh5co-lead to-animate">구매대행시스템</h1>
+                                <h2 class="fh5co-sub-lead to-animate-2">비용절약, 시간절약, 긴급대응, 통합관리서비스 구매업무의 효율성 개선을 위한 서비스.</h2>
+                                <p class="to-animate-2"><a href="http://www.brightman.co.kr/" target="_blank" class="btn btn-primary btn-lg">자세히 보기</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--div class="col-md-4 col-md-push-1 col-sm-4 col-sm-push-1 iphone-image">
+                              <div class="iphone to-animate-2"><img src="images/iphone-2.png" alt="Free HTML5 Template by FREEHTML5.co"></div>
+                    </div-->
+                </div>
+            </div>
+        </div>
+        <!-- You may change the background color here.  -->
+        <div class="item" style="background-image:url(images/slidebg02.jpg)">
+        <div class="overlay"></div>
+        <div class="container" style="position: relative;">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="fh5co-owl-text-wrap">
+                        <div class="fh5co-owl-text">
+                            <h1 class="fh5co-lead to-animate">반응형 통합커머스, 홈페이지 구축</h1>
+                            <h2 class="fh5co-sub-lead to-animate-2">모든 웹 브라우저에서 정상적인 작동을 보장하고, 사용자 체험환경(UX)을 고려하여 멀티 디바이스를 구현</h2>
+                            <p class="to-animate-2"><a href="#" class="btn btn-primary btn-lg">자세히 보기</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!--div class="col-md-4 col-md-pull-7 col-sm-4 col-sm-pull-7 iphone-image">
+                    <div class="iphone to-animate-2"><img src="images/iphone-1.png" alt="Free HTML5 Template by FREEHTML5.co"></div>
+                </div-->
+            </div>
+        </div>
+    </div>
+    <div class="item" style="background-image:url(images/slidebg03.jpg)">
+        <div class="overlay"></div>
+        <div class="container" style="position: relative;">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <div class="fh5co-owl-text-wrap">
+                        <div class="fh5co-owl-text">
+                            <h1 class="fh5co-lead to-animate">OUR VISION YOUR FURE</h1>
+                            <h2 class="fh5co-sub-lead to-animate-2">고객만족 서비스와  신뢰를 바탕으로 고객의 입장에 서서  정확하고 신속한 업무진행과 한발 앞선 서비스</h2>
+                            <p class="to-animate-2"><a href="images/company_information.pdf" target="_blank" class="btn btn-primary btn-lg">회사소개 다운로드</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="fh5co-about-us" data-section="company">
+        <div class="container">
+            <div class="row row-bottom-padded-sm" id="about-us">
+                <div class="col-md-12 section-heading text-center single-animate animate-about-us-1">
+                    <h2>회사소개</h2>
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0">
+                            <h4>기업간거래최적화시스템 브라이트맨은 커머스 중심의 개발을 통해 기업간거래최적화시스템 구축을 목표로 고객의 요구사항을 반영한 다양한 업무, 거래 시스템을 구현, 배포하고 있으며 경험과 노하우를 토대로 커머스 운영대행을 하고 있는 기업입니다.</h4>
+                        </div>
+                        <div class="row  animate-about-us-2">
+                            <div class="col-md-6 col-md-offset-0 to-animate text-left " style="padding-top:70px">
+                                <p>㈜우리같이는 취약계층에게 사회서비스 또는 일자리를 제공하여 지역주민의 삶의 질을 높이는 등의 사회적 목적을 추구하면서 재화 및 서비스의 생산.판매 등 영업활동을 하는 예비사회적기업입니다.  2010년 개인사업을 시작으로 2014년 법인을 설립, 국내 디자인사업, 판촉, 홍보사업, 전략사업, 중국사업, 무역사업 등 다양한 사업영역으로 진출하여 새로운 도약을 꿈꾸고 있습니다.</p>
+                                <p>“고객에서 신뢰받는 기업”이라는 목표 아래 전문성과 열정을 갖춘 당사는 지속적인 신 사업 개발과 신흥시장에서의 사업기회를 적극적으로 발굴하여 비전의 조기 달성을 위하여 노력하고 있습니다.</p>
+                            </div>
+                            <div class="col-md-6 to-animate text-left" style="padding-top:70px">
+                                <p>사업분야를 다각화하여, 안정적이며 다양한 수익원을 창출하기 위하여 전 임직원이 한마음으로 노력하고 있으며, 급변하는 글로벌 경쟁 체제 속에서“협력사의 경쟁력 향상이 곧 우리의 경쟁력 향상”이라는 파트너쉽을 바탕으로 유망 중소기업을 지속적으로 발굴하며, 기술력 강화 등 유통채널의 글로벌 확대로 동반자적 성장시스템을 구축해 나가고 있습니다.</p>
+                                <p>끝없는 도전으로 21세기를 선도하며 나날이 성장해 가는 기업, ㈜우리같이에 앞으로 더 많은 성원과 격려를 보내주시길 부탁드립니다. 감사합니다.</p>
+                                <p>㈜우리같이 대표이사<br /> <strong>한 주 석</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="fh5co-our-services" data-section="services">
+        <div class="container">
+            <div class="row row-bottom-padded-sm">
+                <div class="col-md-12 section-heading text-center single-animate animate-our-services-1">
+                    <h2 class="">서비스</h2>
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0">
+                            <h4>다년간 기업, 백화점, 마트, 관공서, 보험들 홍보를 필요로 하는 기업에 맞춤형 판촉물 전문기업인‘우리같이’는 판촉시장에서 체득한 노하우와 발로 뛰면서 체험한 판촉업무의 지식을 기반으로 최적화된 시스템을 자랑하고 있으며, 철저한 검수(납품)등 포괄적인 업무를 수행해 오고 있습니다.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row single-animate animate-our-services-2">
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="icon colored-1"><span><i class="icon-mustache"></i></span></div>
+                        <h3>전자 상거래외 판촉 , <br />특판</h3>
+                        <p>기업 의전용 답례품 외 다수 기념품, 홍보물 제작</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon colored-4"><span><i class="icon-heart"></i></span></div>
+                        <h3>사은품, <br />상패</h3>
+                        <p>상패 및 트로피, 개업, 답례품 외 사은행사의 선물류</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="icon colored-2"><span><i class="icon-screen-desktop"></i></span></div>
+                        <h3>기업간거래<br />최적화시스템</h3>
+                        <p> 고객의 요구사항을 반영한 다양한 업무, 거래 시스템을 구현, 배포하고 있으며 경험과 노하우를 토대로 커머스 운영대행을 하고 있는 기업<br /></p>
+                    </div>
+                    <div class="box">
+                        <div class="icon colored-5"><span><i class="icon-rocket"></i></span></div>
+                        <h3>반응형 쇼핑몰 분양사업</h3>
+                        <p>W3C(World Web Consortium)가 승인한 개방형 인터넷 표준을 준수하여 모든 웹 브라우저에서 정상적인 작동을 보장하고, 사용자 체험환경(UX)을 고려하여 멀티 디바이스를 구현하는 모든 사용자에게 동일한 사용자 환경을 제공</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box">
+                        <div class="icon colored-3"><span><i class="icon-eye"></i></span></div>
+                        <h3>스티커, 전단지,<br /> 리플렛, 명함</h3>
+                        <p>홍보전단 및 리플렛 제작</p>
+                    </div>
+                    <div class="box">
+                        <div class="icon colored-6"><span><i class="icon-user"></i></span></div>
+                        <h3>맞춤형 홈페이지 제작</h3>
+                        <p>브랜드의 아이덴티티와 고객의 니즈를 충분히 반영하고 최신 트랜드의 디자인을 접목하여 완성도 있는 웹 사이트 제작</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-features" data-section="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center">
+                    <h2 class="single-animate animate-features-1">기술력</h2>
+                    <div class="row">
+                        <div class="col-md-12 col-md-offset-0 single-animate animate-features-2">
+                            <h4>다년간의 실무경력을 지닌 브라이트맨은 최적화된 솔루션 제공, 신속하고 유기적인 통합 마케팅으로 가장 적합한 접점을 이끌어 냅니다. </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-bottom-padded-sm">
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+                    <div class="fh5co-icon"><i class="icon-present"></i></div>
+                    <div class="fh5co-desc">
+                        <h3>전문 MD</h3>
+                        <p>기업의 예산 규모에 맞춰 경쟁력있는 컨설팅</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+                    <div class="fh5co-icon"><i class="icon-eye"></i></div>
+                    <div class="fh5co-desc">
+                        <h3>B2B 전자구매 솔루션 제공</h3>
+                        <p>쉽고 빠르게 원하는 상품을 찾는 최적화된 솔루션 www.brightman.co.kr </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+                    <div class="fh5co-icon"><i class="icon-crop"></i></div>
+                    <div class="fh5co-desc">
+                        <h3>Faithfulness</h3>
+                        <p>고객만족 서비스를 위한 1:1 전문적인 상담 신속하고 정확한 배송 및 철저한 검수(사후관리)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-service to-animate">
+                    <div class="fh5co-icon"><i class="icon-heart"></i></div>
+                    <div class="fh5co-desc">
+                        <h3>Business</h3>
+                        <p>전자상거래외 판촉, 특판, 홍보전단 및 리플렛제작 명절선물, 사은품, 상패 제작</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-testimonials" data-section="history">
+        <div class="container">
+            <div class="row single-animate animate-testimonials-1">
+                <div class="col-md-12 section-heading text-center">
+                    <h2>연혁</h2>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h3 style="color:#d3daf0">(주)우리같이가 걸어온 길입니다.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container single-animate animate-testimonials-2">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="images/history01.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel single-animate animate-testimonials-3">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">2012년</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">- 캐논코리아 판촉물 제작<br />- 룩옵티컬 판촉물 제작<br />- 삼성전자 구매고객 사은품 납품<br />- 현대백화점 판촉물 제작<br />- 삼성생명 판촉물 진행</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="images/history02.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel single-animate animate-testimonials-4">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">2013년</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">- 현대 백화점 대구,울산,동구점 고객사은품 납품(매월)<br />- 현대위아 의전용품 납품 년 계약<br />- BMW 구매고객 홍보물 제작 납품 년 계약<br />- 현대호텔 년간 정기 판촉물 납품 년 계약<br />- 현대호텔 대내외 방문객 상품납품<br />- 현대중공업 신입사원 선물</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="images/history03.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel single-animate animate-testimonials-3">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">2014년</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">- 현대자동차 설문조사 기념품 납품<br />- 우리환경 주식회사 리플렛,우편봉투,대봉투제작<br />- 형지그룹 VIP 고객 감사 사은품 납품<br />- 한국 원자력발전소 기념품 납품<br />- 주식회사 우리같이로 법인전환<br />- 현대중공업 신입사원 비품 납품</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="images/history04.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel single-animate animate-testimonials-4">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">2015년</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">- 롯데홈쇼핑 온라인 상품 입점<br />- 경주 현대호텔 비품 납품<br />- 농협 사은품납품<br />- 롯데시네마 울산점 판촉물제작<br />- 울산 사회적경제 창업팀 육성지원사업 약정체결</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="images/history05.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel single-animate animate-testimonials-3">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">2016년</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">- 동문건설 분양 홍보물품 제작<br />- 틴버블(휴대용천연비누) 개발 및 제조<br />-자체 특허보유. 상표보유<br />울산예비사회적기업지정 2016 HIT500 선정<br />- Brightman 구매대행요청 홈페이지 개발</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-pricing" data-section="pricing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center single-animate animate-pricing-1">
+                    <h2>정부보호 인증</h2>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 subtext">
+                            <h4><strong>공공기관 우선구매</strong> (주) 우리같이는 상품을 팔기 위해 고용을 하는 것이 아니라 고용을 위해 상품을 제작,판매를 한다는 모토로 “취약계층의 일자리 창출과, 지역사회 공헌을 목적으로 하는 예비 사회적 기업” 입니다.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row single-animate animate-pricing-2">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <div class="person">
+                                <img src="images/person4.jpg" class="img-responsive img-rounded" alt="사회적기업">
+                                <h3 class="name">01</h3>
+                                <div class="position">사회적 기업의 목적</div>
+                                <p>사회적기업의 활성화를 통해 취약계층에게 양질의 일자리와 사회서비스를 제공하여 소득의 재분배 기능을 수행하며 복지 비용 절감<br /> <br /> 사회적기업 상품 구매는 사회적기업의 성장, 그로 인해 창출된 이윤이 사회 문제 해결, 신규 일자리창출로 재투자되는 선순환 구조를 이루며 지역 경제 활성화와 사회통합 구현</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="person">
+                                <img src="images/person3.jpg" class="img-responsive img-rounded" alt="사회적기업">
+                                <h3 class="name">02</h3>
+                                <div class="position">사회적기업의 사업영역</div>
+                                <p>사회적기업 시장확대 및 판로개척을 위해 공공시장 확대사업을 추진하고, 사회적 기업의 시장개척 역량을 강화하여 사회적기업 상품 소비 촉진을 위한 윤리적 소비 시장 진작 및 홍보</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="person">
+                                <img src="images/person2.jpg" class="img-responsive img-rounded" alt="사회적기업">
+                                <h3 class="name">03</h3>
+                                <div class="position">사회적 기업의 우선구매촉진법</div>
+                                <p>사회적기업이 생산하는 재화나 서비스의 우선 구매 촉진 (법 제 12조)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-ci" data-section="ci">
+        <div class="fh5co-ci-item" style="background-image:url('images/bg1.jpg'); ">
+            <div class="container">
+                <div class="col-md-12 section-heading text-center ">
+                    <h1 class="single-animate animate-ci-1" >Brand Identity</h1>
+                    <div class="row single-animate animate-ci-2">
+                        <h3 class="fh5co-ci-text">(주)우리같이의 브랜드인  <strong>"Brigntman"</strong>의 CI의 의미는 ‘Bright’와 ‘man’의 합성으로, Bright의 밝다. 환하다. 와  man사람을 상징하는 뜻으로 결합하여 “밝은세상을 여는 사람, 새로운 가치에 도전하여 선구자 역할을 하는 기업”이라는 의미를 담고 있습니다. 또한 B자에 날개이미지를 표현하여 남들보다 한 발 빠른 미래지향적인 기업 이미지를 표현하고 있습니다.</h3>
+                        <a href="images/brightman_logo.zip" target="_blank" class="btn btn-primary btn-lg" style="margin-top:30px">DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fh5co-press">
+        <div class="container">
+            <div class="row" data-section="contact">
+                <div class="fh5co-press-title col-md-12 section-heading text-center single-animate animate-press-1" style="margin-top:100px;">
+                    <h2 >오시는길</h2>
+                    <div class="row" >
+                        <div class="col-md-8 col-md-offset-2 subtext ">
+                            <h4>항상 다양한 제품과 경쟁력있는 가격으로 고객만족 서비스와 신뢰를 바탕으로 고객의 입장에 서서 정확하고 신속한 업무진행과 한발 앞선 서비스로 보답해 나가겠습니다.</h4>
+                        </div>
+                    </div>
+                    <div class="row animate-press-2" style="margin-top:50px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.6188312229797!2d129.29515764582305!3d35.53841602440623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3566329e30682711%3A0x8bc1621bc1c63c2a!2z7Jq47IKw6rSR7Jet7IucIOuCqOq1rCDrrLjsiJjroZwzNjnrsojquLggNTk!5e0!3m2!1sko!2skr!4v1482974152659" width="100%" height="450px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" role="contentinfo">
+        <div class="container">
+            <div class="row row-bottom-padded-sm">
+                <div class="col-md-12">
+                    <p class="copyright text-center">&copy; 2016 <a href="index.html">wewith</a>. All Rights Reserved. <br> wewith Made By  <a href="http://www.brightman.co.kr/" target="_blank">www.brightman.co.kr</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <ul class="social social-circle">
+                        <li><a href="https://www.facebook.com/brightman.co.kr" target="_blank"><i class="icon-facebook"></i></a></li>
+                        <li><a href="http://blog.naver.com/hohoband" target="_blank"><span style="font-size:20px"><strong>B</strong></span></i></a></li>
+                        <!----li><a href="#"><i class="icon-twitter"></i></a></li>
+                              <li><a href="#"><i class="icon-youtube"></i></a></li>
+                              <li><a href="#"><i class="icon-pinterest"></i></a></li>
+                              <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                              <li><a href="#"><i class="icon-instagram"></i></a></li>
+                              <li><a href="#"><i class="icon-dribbble"></i></a></li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- For demo purposes Only ( You may delete this anytime :-) -->
+    <!--div id="colour-variations">
+        <a class="option-toggle"><i class="icon-gear"></i></a>
+        <h3>Preset Colors</h3>
+        <ul>
+            <li><a href="javascript: void(0);" data-theme="style"></a></li>
+            <li><a href="javascript: void(0);" data-theme="pink"></a></li>
+            <li><a href="javascript: void(0);" data-theme="blue"></a></li>
+            <li><a href="javascript: void(0);" data-theme="turquoise"></a></li>
+            <li><a href="javascript: void(0);" data-theme="orange"></a></li>
+            <li><a href="javascript: void(0);" data-theme="lightblue"></a></li>
+            <li><a href="javascript: void(0);" data-theme="brown"></a></li>
+            <li><a href="javascript: void(0);" data-theme="green"></a></li>
+        </ul>
+    </div-->
+    <!-- End demo purposes only -->
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- For demo purposes only styleswitcher ( You may delete this anytime ) -->
+    <script src="js/jquery.style.switcher.js"></script>
+    <script>
+        $(function () {
+            $('#colour-variations ul').styleSwitcher({
+                defaultThemeId: 'theme-switch',
+                hasPreview: false,
+                cookie: {
+                    expires: 30,
+                    isManagingLoad: true
+                }
+            });
+            $('.option-toggle').click(function () {
+                $('#colour-variations').toggleClass('sleep');
+            });
+        });
+    </script>
+    <!-- End demo purposes only -->
+    <!-- Main JS (Do not remove) -->
+    <script src="js/main.js"></script>
+</body>
+</html>
